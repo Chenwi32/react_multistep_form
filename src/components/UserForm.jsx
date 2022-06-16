@@ -7,15 +7,26 @@ import Success from "./Success";
 function UserForm() {
   const [page, setPage] = useState(0);
 
+  const [formData, setFormData] = useState({
+    email: '',
+    userName: '',
+    firsName: '',
+    lastName: '',
+    dateOfBirth: '',
+    country: '',
+    insurancePolicy: ''
+
+  })
+
   const titles = ["Register", "Please help us know more about you", "Other"];
 
   const DisplayPage = () => {
     if (page === 0) {
-      return <Register />;
+      return <Register formData={formData} setFormData={setFormData}/>;
     } else if (page === 1) {
-      return <PersonalDetails />;
+      return <PersonalDetails formData={formData} setFormData={setFormData} />;
     } else if (page === 2) {
-      return <Other />;
+      return <Other formData={formData} setFormData={setFormData}/>;
     } else if (page === 3) {
       return <Success />;
     }
@@ -26,7 +37,7 @@ function UserForm() {
       <div className="progress_bar">
         <div
           className="progress_level"
-          style={{
+          st yle={{
             width:
               page === 0
                 ? "25%"
