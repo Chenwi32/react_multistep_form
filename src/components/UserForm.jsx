@@ -38,7 +38,7 @@ function UserForm() {
       <div className="progress_bar">
         <div
           className="progress_level"
-          st yle={{
+          style={{
             width:
               page === 0
                 ? "25%"
