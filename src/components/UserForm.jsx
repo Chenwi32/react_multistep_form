@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState } from "react";
 import Other from "./Other";
 import PersonalDetails from "./PersonalDetails";
 import Register from "./Register";
@@ -10,13 +10,14 @@ function UserForm() {
   const [formData, setFormData] = useState({
     email: '',
     userName: '',
-    firsName: '',
+    firstName: '',
     lastName: '',
     dateOfBirth: '',
     country: '',
     insurancePolicy: ''
 
   })
+
 
   const titles = ["Register", "Please help us know more about you", "Other"];
 
